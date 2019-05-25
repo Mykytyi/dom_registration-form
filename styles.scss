@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+
+  .container {
+    width: 450px;
+    min-height: 500px;
+    margin: 0 auto;
+    border: 2px solid #00acdc;
+    position: relative;
+    label {
+      display: block;
+      margin-bottom: 20px;
+    }
+    select {
+      display: block;
+      margin-bottom: 20px;
+    }
+    #selectReg {
+
+    }
+    #selectCity {
+
+    }
+    #submUsInf {
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      left: 40%;
+      margin: 0 auto;
+      border: 2px solid #687c94;
+      width: 100px;
+      height: 25px;
+      background-color: transparent;
+    }
+  }
+}
