@@ -9,12 +9,12 @@ let cities = {
   'West': ['Not in the list', 'Chernivtsi', 'Ivano-Frankivsk', 'Khmelnytskyi', 'Lutsk', 'Lviv', 'Rivne', 'Ternopil', 'Uzhhorod']
 };
 
-let fullNameStr = document.getElementById('fullname');
-let telephNumb = document.getElementById('telephone');
-let selectReg = document.getElementById('selectReg');
-let chckBox = document.getElementById('reject');
-let subButt = document.getElementById('submUsInf');
-let telLabel = document.querySelector('.check-label');
+const fullNameStr = document.getElementById('fullname');
+const telephNumb = document.getElementById('telephone');
+const selectReg = document.getElementById('selectReg');
+const chckBox = document.getElementById('reject');
+const subButt = document.getElementById('submUsInf');
+const telLabel = document.querySelector('.check-label');
 
 //flags
 let isFullNameStr = false;
@@ -67,17 +67,14 @@ document.addEventListener('click', function() {
 fullNameStr.onblur = function() {
   let fullNameArr = this.value.trim().split(' ');
 
-  if (fullNameArr.length < 2) {
-    fullNameStr.style.backgroundColor = '\#EE6257';
-    isFullNameStr = false;
-  } else if (fullNameArr.length > 2) {
-    fullNameStr.style.backgroundColor = '\#EE6257';
-    isFullNameStr = false;
-  } else if (fullNameArr.length === 2) {
+  if (fullNameArr.length === 2) {
     fullNameStr.style.backgroundColor = '\#87E368';
     isFullNameStr = true;
+  } else {
+    fullNameStr.style.backgroundColor = '\#EE6257';
+    isFullNameStr = false;
   }
-}
+};
 telephNumb.onblur = function() {
   const validTelNum = /([+]380|380|012)(\d{9})/;
 
@@ -88,7 +85,4 @@ telephNumb.onblur = function() {
     telephNumb.style.backgroundColor = '\#EE6257';
     isTelephNum = false;
   }
-}
-
-
-
+};
